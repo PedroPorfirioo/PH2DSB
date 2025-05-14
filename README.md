@@ -4,3 +4,5 @@ Angelina N° 2
 Camila N° 4
 Sthefany N° 33
 Matheus Henrique N° 16
+André N° 1
+Sthefany 
