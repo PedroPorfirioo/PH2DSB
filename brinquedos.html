@@ -218,6 +218,11 @@
 
 <body>
     <header>
+        <div class="theme-toggle">
+            <button id="themeToggle" title="Alternar Tema">
+              <img id="themeIcon" src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Sol" />
+            </button>
+          </div>        
 
         <div class="arrumar">
             <header>
@@ -261,8 +266,8 @@
     <div class="produtos-container">
 
         <div class="produto">
-            <a href="pagina clicavel.html">
-                <img src="https://i.ibb.co/k2N7GfsL/Whats-App-Image2024-04-01at15-54-07.jpg" alt="">
+            <img src="https://i.ibb.co/k2N7GfsL/Whats-App-Image2024-04-01at15-54-07.jpg"
+                alt="Trem de Brinquedo - Encontrado na sala do 6E as 17:12h">
             </a>
 
 
@@ -270,12 +275,12 @@
 
         <div class="produto">
             <img src="https://i.ibb.co/G3x7592N/elefante-de-pelucia-30cm-cinza-havan-toys-748788-1.webp"
-                alt="Elefante de pelucia"> </a>
+                alt="Elefante de pelucia - Encontrado na sala do 6A as 18:33h"> </a>
 
         </div>
 
         <div class="produto">
-            <img src="https://i.ibb.co/ycr8VBs9/br-11134201-7r98o-ln6dfeylk8xvf4.jpg" alt="Caderno do Stitch">
+            <img src="https://i.ibb.co/C3XcHLX8/stich.jpg" alt="Brinquedo do Stitch - Encontrado na sala do 6C as 14:20h">
 
         </div>
 
@@ -333,7 +338,6 @@
             let texto = document.createElement('p');
             texto.textContent = produto.querySelector('img').alt;
             texto.style.fontSize = '15px';
-            texto.style.color = 'black';
             texto.style.textAlign = 'center';
             texto.style.marginTop = '10px';
             texto.style.fontWeight = 'bold';
@@ -350,9 +354,7 @@
             }
         });
     });
-</script>
 
-<script>
     const themeToggle = document.getElementById('themeToggle');
     const themeIcon = document.getElementById('themeIcon');
     const body = document.body;
@@ -368,5 +370,6 @@
             themeIcon.alt = "Sol";
         }
     });
+
 
 </script>
