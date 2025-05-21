@@ -104,7 +104,6 @@
             max-width: 180px;
             width: 100px;
             height: 100px;
-            background: #f4f4f4;
             transition: width 1s, height 1s;
             padding: 15%;
 
@@ -212,6 +211,23 @@
         #themeToggle:hover #themeIcon {
             transform: scale(1.1);
         }
+
+        body.dark {
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 
 </head>
@@ -220,9 +236,9 @@
     <header>
         <div class="theme-toggle">
             <button id="themeToggle" title="Alternar Tema">
-              <img id="themeIcon" src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Sol" />
+                <img id="themeIcon" src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Sol" />
             </button>
-          </div>        
+        </div>
 
         <div class="arrumar">
             <header>
@@ -232,8 +248,7 @@
 
         <form id="searchForm">
             <input type="text" id="searchInput" placeholder="Digite sua pesquisa">
-            <button type="submit">=
-            </button>
+            <button type="submit">🔍</button>
         </form>
 
         <div class="arrumar">
@@ -280,7 +295,8 @@
         </div>
 
         <div class="produto">
-            <img src="https://i.ibb.co/C3XcHLX8/stich.jpg" alt="Brinquedo do Stitch - Encontrado na sala do 6C as 14:20h">
+            <img src="https://i.ibb.co/C3XcHLX8/stich.jpg"
+                alt="Brinquedo do Stitch - Encontrado na sala do 6C as 14:20h">
 
         </div>
 
