@@ -10,7 +10,7 @@
 
   <style>
     header {
-      background: linear-gradient(to left, blue, black);
+      background: linear-gradient(to left, rgb(208, 0, 255), black);
       padding: 1px;
       text-align: center;
       color: rgb(0, 0, 0);
@@ -130,7 +130,7 @@
 
     h2 {
       font-family: 'Courier New', Courier, monospace;
-      color: #bdd8f4;
+      color: #ffffff;
     }
 
     footer {
@@ -160,7 +160,7 @@
     }
 
     nav {
-      background: linear-gradient(to left, black, blue);
+      background: linear-gradient(to left, black, rgb(208, 0, 255));
       margin: 0;
       padding: 0;
       width: 100%;
@@ -203,6 +203,7 @@
       width: 50px;
       height: 50px;
       transition: transform 0.3s ease;
+
       position: absolute;
       top:2%;
       left: 92%;
@@ -259,10 +260,10 @@
       <ul>
         <li><a href="forum.html">Forúm</a></li>
         <li><a href="login page.html">Login</a></li>
-        <li><a href="C:\Users\aluno\Downloads\slasjahdauewghu\paginasaparte\material.html">Material</a></li>
-        <li><a href="C:\Users\aluno\Downloads\slasjahdauewghu\paginasaparte\objetos.html">Objetos</a></li>
-        <li><a href="C:\Users\aluno\Downloads\slasjahdauewghu\paginasaparte\roupas.html">Roupas</a></li>
-        <li><a href="C:\Users\aluno\Downloads\slasjahdauewghu\paginasaparte\brinquedos.html">Brinquedos</a></li>
+        <li><a href="material.html">Material</a></li>
+        <li><a href="objetos.html">Objetos</a></li>
+        <li><a href="roupas.html">Roupas</a></li>
+        <li><a href="brinquedos.html">Brinquedos</a></li>
       </ul>
     </nav>
 
@@ -300,12 +301,12 @@
 
     <div class="produto">
       <img src="https://i.ibb.co/gZPzhHY6/0160857626001-ESTOJO-MASCULINO-COLOR-BLOCK-24-J-VERDE-ESCURO-U00007.jpg"
-        alt="Estojo Verde "> </a>
+        alt="Estojo Verde - Encontrado na sala do 2B as 9:30h"> </a>
 
     </div>
 
     <div class="produto">
-      <img src="https://i.ibb.co/ycr8VBs9/br-11134201-7r98o-ln6dfeylk8xvf4.jpg" alt="Caderno do Stitch">
+      <img src="https://i.ibb.co/ycr8VBs9/br-11134201-7r98o-ln6dfeylk8xvf4.jpg" alt="Caderno do Stitch - Encontrado na sala do 9A as 10:00h">
 
     </div>
 
