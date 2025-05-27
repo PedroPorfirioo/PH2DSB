@@ -10,7 +10,7 @@
 
     <style>
         header {
-            background: linear-gradient(to left, blue, black);
+            background: linear-gradient(to left, rgb(183, 0, 255), rgb(0, 0, 0));
             padding: 1px;
             text-align: center;
             color: rgb(0, 0, 0);
@@ -47,7 +47,7 @@
 
         button {
             padding: 10px 15px;
-            background-color: #007bff;
+            background-color: #000000;
             color: white;
             border: none;
             border-radius: 20px;
@@ -55,7 +55,7 @@
         }
 
         button:hover {
-            background-color: #0056b3;
+            background-color: #000000;
         }
 
         .user {
@@ -66,7 +66,7 @@
 
 
         .user img {
-            width: 50px;
+            width: 60px;
             height: auto;
         }
 
@@ -104,7 +104,6 @@
             max-width: 180px;
             width: 100px;
             height: 100px;
-            background: #f4f4f4;
             transition: width 1s, height 1s;
             padding: 15%;
 
@@ -131,7 +130,7 @@
 
         h2 {
             font-family: 'Courier New', Courier, monospace;
-            color: #bdd8f4;
+            color: white;
         }
 
         footer {
@@ -161,7 +160,7 @@
         }
 
         nav {
-            background: linear-gradient(to left, black, blue);
+            background: linear-gradient(to left, rgb(183, 0, 255), rgb(0, 0, 0));
             margin: 0;
             padding: 0;
             width: 100%;
@@ -188,8 +187,47 @@
         }
 
         nav a:hover {
-            background-color: blue;
+            background-color: rgb(0, 0, 0);
             border-radius: 5px;
+        }
+
+
+        #themeToggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            margin-top: 20px;
+        }
+
+        #themeIcon {
+            width: 50px;
+            height: auto;
+            transition: transform 0.3s ease;
+            position: absolute;
+            top: 10px;
+            left: 93%
+        }
+
+        #themeToggle:hover #themeIcon {
+            transform: scale(1.1);
+        }
+
+        body.dark {
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 
@@ -197,6 +235,12 @@
 
 <body>
     <header>
+
+        <div class="theme-toggle">
+            <button id="themeToggle" title="Alternar Tema">
+                <img id="themeIcon" src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Sol" />
+            </button>
+        </div>
 
         <div class="arrumar">
             <header>
@@ -232,32 +276,6 @@
                 <img src="https://i.ibb.co/ymQC0k4n/user-icon-on-transparent-background-free-png.png">
             </a>
         </div>
-        <script>
-            const produtos = document.getElementsByClassName('produto');
-
-            for (let i = 0; i < produtos.length; i++) {
-                produtos[i].addEventListener('mouseenter', function () {
-                    let texto = document.createElement('p');
-                    texto.textContent = 'Carregador Preto';
-                    texto.style.fontSize = '36px';
-                    texto.style.color = 'black';
-                    texto.style.textAlign = 'center';
-
-
-                    if (!produtos[i].querySelector('p')) {
-                        produtos[i].appendChild(texto);
-                    }
-                });
-
-                produtos[i].addEventListener('mouseleave', function () {
-                    let textoExistente = produtos[i].querySelector('p');
-                    if (textoExistente) {
-                        produtos[i].removeChild(textoExistente);
-                    }
-                });
-            }
-
-        </script>
 
 
     </header>
@@ -330,3 +348,49 @@
 </body>
 
 </html>
+
+<script>
+
+    const produtos = document.querySelectorAll('.produto');
+
+    produtos.forEach(produto => {
+        produto.addEventListener('mouseenter', function () {
+            let texto = document.createElement('p');
+            texto.textContent = produto.querySelector('img').alt;
+            texto.style.fontSize = '15px';
+            texto.style.textAlign = 'center';
+            texto.style.marginTop = '10px';
+            texto.style.fontWeight = 'bold';
+
+            if (!produto.querySelector('p')) {
+                produto.appendChild(texto);
+            }
+        });
+
+        produto.addEventListener('mouseleave', function () {
+            let textoExistente = produto.querySelector('p');
+            if (textoExistente) {
+                produto.removeChild(textoExistente);
+            }
+        });
+    });
+
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const body = document.body;
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark');
+
+        if (body.classList.contains('dark')) {
+            themeIcon.src = "https://i.ibb.co/p6PfNXhH/Luapng.png";
+            themeIcon.alt = "Lua";
+        }
+        else {
+            themeIcon.src = "https://cdn-icons-png.flaticon.com/512/869/869869.png";
+            themeIcon.alt = "Sol";
+        }
+    });
+
+
+</script>
