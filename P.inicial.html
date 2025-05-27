@@ -55,7 +55,7 @@
     }
 
     button:hover {
-      background-color: #0056b3;
+      background-color: #000000;
     }
 
     .user {
@@ -130,7 +130,7 @@
 
     h2 {
       font-family: 'Courier New', Courier, monospace;
-      color: #bdd8f4;
+      color: #ffffff;
     }
 
     footer {
@@ -179,7 +179,7 @@
     }
 
     nav a {
-      color: azure;
+      color: rgb(255, 255, 255);
       text-decoration: none;
       font-family: 'Courier New', Courier, monospace;
       font-size: 18px;
@@ -187,7 +187,7 @@
     }
 
     nav a:hover {
-      background-color: blue;
+      background-color: rgb(0, 0, 0);
       border-radius: 5px;
     }
 
@@ -204,8 +204,8 @@
       height: auto;
       transition: transform 0.3s ease;
       position: absolute;
-      top: 10px;
-      left: 93%
+      top: 2%;
+      left: 92%;
     }
 
     #themeToggle:hover #themeIcon {
@@ -260,10 +260,10 @@
       <ul>
         <li><a href="forum.html">Forúm</a></li>
         <li><a href="login page.html">Login</a></li>
-        <li><a href="C:\Users\aluno\Downloads\slasjahdauewghu\paginasaparte\material.html">Material</a></li>
-        <li><a href="C:\Users\aluno\Downloads\slasjahdauewghu\paginasaparte\objetos.html">Objetos</a></li>
-        <li><a href="C:\Users\aluno\Downloads\slasjahdauewghu\paginasaparte\roupas.html">Roupas</a></li>
-        <li><a href="C:\Users\aluno\Downloads\slasjahdauewghu\paginasaparte\brinquedos.html">Brinquedos</a></li>
+        <li><a href="material.html">Material</a></li>
+        <li><a href="objetos.html">Objetos</a></li>
+        <li><a href="roupas.html">Roupas</a></li>
+        <li><a href="brinquedos.html">Brinquedos</a></li>
       </ul>
     </nav>
 
@@ -361,44 +361,44 @@
 <script>
   const produtos = document.querySelectorAll('.produto');
 
-    produtos.forEach(produto => {
-        produto.addEventListener('mouseenter', function () {
-            let texto = document.createElement('p');
-            texto.textContent = produto.querySelector('img').alt;
-            texto.style.fontSize = '15px';
-            texto.style.textAlign = 'center';
-            texto.style.marginTop = '10px';
-            texto.style.fontWeight = 'bold';
+  produtos.forEach(produto => {
+    produto.addEventListener('mouseenter', function () {
+      let texto = document.createElement('p');
+      texto.textContent = produto.querySelector('img').alt;
+      texto.style.fontSize = '15px';
+      texto.style.textAlign = 'center';
+      texto.style.marginTop = '10px';
+      texto.style.fontWeight = 'bold';
 
-            if (!produto.querySelector('p')) {
-                produto.appendChild(texto);
-            }
-        });
-
-        produto.addEventListener('mouseleave', function () {
-            let textoExistente = produto.querySelector('p');
-            if (textoExistente) {
-                produto.removeChild(textoExistente);
-            }
-        });
+      if (!produto.querySelector('p')) {
+        produto.appendChild(texto);
+      }
     });
 
-    const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-    const body = document.body;
-
-    themeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark');
-
-        if (body.classList.contains('dark')) {
-            themeIcon.src = "https://i.ibb.co/p6PfNXhH/Luapng.png";
-            themeIcon.alt = "Lua";
-        }
-        else {
-            themeIcon.src = "https://cdn-icons-png.flaticon.com/512/869/869869.png";
-            themeIcon.alt = "Sol";
-        }
+    produto.addEventListener('mouseleave', function () {
+      let textoExistente = produto.querySelector('p');
+      if (textoExistente) {
+        produto.removeChild(textoExistente);
+      }
     });
+  });
+
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+  const body = document.body;
+
+  themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark');
+
+    if (body.classList.contains('dark')) {
+      themeIcon.src = "https://i.ibb.co/p6PfNXhH/Luapng.png";
+      themeIcon.alt = "Lua";
+    }
+    else {
+      themeIcon.src = "https://cdn-icons-png.flaticon.com/512/869/869869.png";
+      themeIcon.alt = "Sol";
+    }
+  });
 
 
 </script>
