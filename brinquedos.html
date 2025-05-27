@@ -7,16 +7,27 @@
     <title>Perdeu, Achou!</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-
     <style>
         header {
-            background: linear-gradient(to left, blue, black);
+            background: linear-gradient(to left, rgb(119, 6, 145), black);
             padding: 1px;
             text-align: center;
             color: rgb(0, 0, 0);
             margin: 0;
             width: 100%;
             font-family: 'Courier New', Courier, monospace;
+        }
+
+        body.dark header {
+            background: linear-gradient(to left, rgb(4, 9, 149), rgb(0, 0, 0));
+        }
+
+        body.dark ul {
+            background: linear-gradient(to left, rgb(4, 9, 149), rgb(0, 0, 0));
+        }
+
+        body.dark button {
+            background-color: #000000;
         }
 
         body {
@@ -47,7 +58,7 @@
 
         button {
             padding: 10px 15px;
-            background-color: #007bff;
+            background-color: #000000;
             color: white;
             border: none;
             border-radius: 20px;
@@ -55,7 +66,7 @@
         }
 
         button:hover {
-            background-color: #0056b3;
+            background-color: #000000;
         }
 
         .user {
@@ -130,7 +141,7 @@
 
         h2 {
             font-family: 'Courier New', Courier, monospace;
-            color: #bdd8f4;
+            color: #ffffff;
         }
 
         footer {
@@ -160,7 +171,7 @@
         }
 
         nav {
-            background: linear-gradient(to left, black, blue);
+            background: linear-gradient(to left,rgb(208, 0, 255) black, );
             margin: 0;
             padding: 0;
             width: 100%;
@@ -179,7 +190,7 @@
         }
 
         nav a {
-            color: azure;
+            color: rgb(255, 255, 255);
             text-decoration: none;
             font-family: 'Courier New', Courier, monospace;
             font-size: 18px;
@@ -187,7 +198,7 @@
         }
 
         nav a:hover {
-            background-color: blue;
+            background-color: rgb(0, 0, 0);
             border-radius: 5px;
         }
 
@@ -229,7 +240,6 @@
             align-items: center;
         }
     </style>
-
 </head>
 
 <body>
