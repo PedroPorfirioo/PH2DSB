@@ -94,6 +94,7 @@
         }
 
 
+        /*estilização do itens perdidos na vitrine */
         .produtos-container {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -110,7 +111,6 @@
         }
 
         .produto {
-
             max-width: 180px;
             width: 100px;
             height: 100px;
@@ -169,6 +169,8 @@
             text-decoration: none;
         }
 
+
+        /*estilização da barra de navegação do  cabeçalho*/
         nav {
             background: linear-gradient(to left, rgb(183, 0, 255), rgb(0, 0, 0));
             margin: 0;
@@ -202,6 +204,7 @@
         }
 
 
+        /*estilização do botão de troca de tema*/
         #themeToggle {
             background: none;
             border: none;
@@ -223,6 +226,8 @@
             transform: scale(1.1);
         }
 
+
+        /*estilização do corpo da página no tema escuro*/
         body.dark {
             background-color: #1e1e1e;
             color: #ffffff;
@@ -244,8 +249,9 @@
 </head>
 
 <body>
-    <header>
 
+    <!-- cabeçalho que contém barra de navegação, barra de pesquisa, pfp e logo do projeto-->
+    <header>
         <div class="theme-toggle">
             <button id="themeToggle" title="Alternar Tema">
                 <img id="themeIcon" src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Sol" />
@@ -287,9 +293,10 @@
             </a>
         </div>
 
-
     </header>
 
+
+    <!-- código dos itens perdidos da vitrine-->
     <div class="produtos-container">
 
         <div class="produto">
@@ -351,6 +358,8 @@
 
         </div>
 
+
+        <!--rodapé-->
         <footer>
             Copyright © 2025 Perdeu, Achou! Inc. Todos os Direitos Reservados. Perdeu, Achou! Corporation Ltda.
         </footer>
