@@ -9,6 +9,8 @@
 
 
   <style>
+
+    /*estilização do cabeçalho*/
     header {
       background: linear-gradient(to left, rgb(183, 0, 255), black);
       padding: 1px;
@@ -19,6 +21,8 @@
       font-family: 'Courier New', Courier, monospace;
     }
 
+
+    /*estilização do corpo da página*/
     body {
       font-family: 'Courier New', Courier, monospace;
       background-color: #f4f4f4;
@@ -30,6 +34,8 @@
       justify-content: center;
     }
 
+
+    /*estilização da barra de pesquisa*/
     #searchForm {
       margin-top: 30px;
       display: flex;
@@ -45,6 +51,8 @@
       width: 250px;
     }
 
+
+    /*estilização do botão de pesquisa*/
     button {
       padding: 10px 15px;
       background-color: #000000;
@@ -58,6 +66,8 @@
       background-color: #000000;
     }
 
+
+    /*estilização da pfp*/
     .user {
       position: absolute;
       top: 10px;
@@ -71,7 +81,7 @@
     }
 
 
-
+/*estilização da logo do projeto*/
     .user2 {
       position: absolute;
       top: 10px;
@@ -84,6 +94,7 @@
     }
 
 
+    /*estilização dos itens perdidos na vitrine*/
     .produtos-container {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -100,7 +111,6 @@
     }
 
     .produto {
-
       max-width: 180px;
       width: 100px;
       height: 100px;
@@ -133,6 +143,8 @@
       color: #ffffff;
     }
 
+
+    /*estilização do rodapé*/
     footer {
       background-color: #333;
       color: #fff;
@@ -159,6 +171,8 @@
       text-decoration: none;
     }
 
+
+    /*estilização da barra de navegação do cabeçalho*/
     nav {
       background: linear-gradient(to left, black, (183, 0, 255));
       margin: 0;
@@ -191,6 +205,8 @@
       border-radius: 5px;
     }
 
+
+    /*estilização do botão de troca de tema*/
     #themeToggle {
       background: none;
       border: none;
@@ -217,7 +233,7 @@
       text-align: center;
     }
 
-
+/*estilização do corpo da página no tema escuro*/
     body.dark {
       background-color: #1e1e1e;
       color: #ffffff;
@@ -239,9 +255,9 @@
 </head>
 
 <body>
+
+  <!--cabeçalho que contém barra de navegação, barra de pesquisa, pfp e logo do projeto-->
   <header>
-
-
     <div class="arrumar">
       <header>
         <h1 style="color: rgb(255, 255, 255);">Perdeu? Achou!</h1>
@@ -276,25 +292,23 @@
         <img src="https://i.ibb.co/ymQC0k4n/user-icon-on-transparent-background-free-png.png">
       </a>
     </div>
-
-
-
   </header>
 
+
+  <!--botão da troca de tema-->
   <div class="theme-toggle">
     <button id="themeToggle" title="Alternar Tema">
       <img id="themeIcon" src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Sol" />
     </button>
   </div>
 
-  <div class="produtos-container">
 
+  <!--itens perdidos da vitrine-->
+  <div class="produtos-container">
     <div class="produto">
       <img src="https://i.ibb.co/jkHsJ8tm/carregador-fonte-usb-2a-com-cabo-usb-c-para-arduino-e-esp32.jpg"
         alt="Carregador USB-C - Encontrado na sala do 1C as 11:50h">
       </a>
-
-
     </div>
 
     <div class="produto">
@@ -350,6 +364,8 @@
 
     </div>
 
+
+    <!--rodapé-->
     <footer>
       Copyright © 2025 Perdeu, Achou! Inc. Todos os Direitos Reservados. Perdeu, Achou! Corporation Ltda.
     </footer>
