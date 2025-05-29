@@ -9,55 +9,65 @@
 
 
   <style>
+
+/*estilizar o cabeçalho*/
     header {
-      background: linear-gradient(to left, rgb(183, 0, 255), black);
-      padding: 1px;
-      text-align: center;
-      color: rgb(0, 0, 0);
-      margin: 0;
-      width: 100%;
-      font-family: 'Courier New', Courier, monospace;
+      background: linear-gradient(to left, rgb(183, 0, 255), black);  /*deiixa um gradiente mais suave*/
+      padding: 1px;  /*ajusta o lugar, pra cima ou pra baixo*/
+      text-align: center;  /*alinha os textos no centro do cabeçalho*/
+      color: rgb(0, 0, 0);  /*coloração*/
+      margin: 0;  /*ajeita a margem do cabeçalho, de um lado ou pro outro*/
+      width: 100%;  /*ajeita a largura do cabeçalho*/
+      font-family: 'Courier New', Courier, monospace;  /*deixa como padrão a fonte de todos os textos dentro do cabbeçalho*/
     }
+ /* fim do css do cabeçalho*/
 
+   /*estiliza o corpo da página*/
     body {
-      font-family: 'Courier New', Courier, monospace;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      font-family: 'Courier New', Courier, monospace; /*deixa como padrão a fonte de todos os textos dentro do cabbeçalho*/
+      background-color: #f4f4f4;  /*deixa a "parede" do site com a cor selecionada*/
+      margin: 0;  /*ajeita a margem que ele ocupa*/
+      padding: 0;  /*ajeita o tamanho que ocupa*/
+      display: flex;   /*deixa o corpo flexivel*/
+      flex-direction: column;  /*deixa as itens alinhados um emcima do outro*/
+      align-items: center;  /*alinha os itens para o centro*/
+      justify-content: center;  /*também alinha os itens para o centro*/
     }
+ /*fim da estilização do corpo*/
 
+     /*estilização da barra de busca*/
     #searchForm {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
+      margin-top: 30px;  /*ajeita a altura que ele ficará*/
+      display: flex;  /*deixa ele flexivel para alterações*/
+      justify-content: center;  /*ajeita ele para o centro*/
+      gap: 10px;  /*define os espaços entre os itens*/
     }
 
     #searchInput {
-      padding: 10px;
-      font-size: 14px;
-      border: 2px solid #ccc;
-      border-radius: 20px;
-      width: 250px;
+      padding: 10px;  /*ajeita a altura que o item irá ficar*/
+      font-size: 14px;  /*define o tamanho do texto*/
+      border: 2px solid #ccc;  /*define o tamanhoo do texto */
+      border-radius: 20px;  /*define se a borda vai ser mais redondo ou mais quadrada*/
+      width: 250px;  /*define a largura do item*/
     }
+ /*fim da estilização da barra de busca*/
 
-    button {
-      padding: 10px 15px;
-      background-color: #000000;
-      color: white;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
+     /*estilização do botão da barra de busca*/
+    button { 
+      padding: 10px 15px; /*ajeita a altura que o item irá ficar*/ 
+      background-color: #000000;  /*define  a cor do fundo do item*/
+      color: white;  /*define a cor do item*/
+      border: none;  /*define como irá ficar a borda do item*/
+      border-radius: 20px;  /*define se a borda irá ficar mais redonda ou mais quadrada*/
+      cursor: pointer; 
     }
 
     button:hover {
-      background-color: #000000;
+      background-color: #000000;  /*define a cor quando o mouse fica emcima do item*/
     }
+ /*fim da estilização do botão da barra de busca*/
 
+     /*estilização da pfp*/
     .user {
       position: absolute;
       top: 10px;
@@ -69,81 +79,85 @@
       width: 60px;
       height: auto;
     }
+ /*fim da estilização da pfp*/
 
-
-
+ /*estilização da logo do site */
     .user2 {
-      position: absolute;
-      top: 10px;
-      left: 10px;
+      position: absolute;  /*define a posição do item*/
+      top: 10px;  /*deefine a altura onde o item irá ficar*/
+      left: 10px;  /*define os lados onde os itens irão ficar*/
     }
 
     .user2 img {
-      width: 50px;
-      height: auto;
-    }
+      width: 50px;  /*define a largura do item*/
+      height: auto;  /*define a */
+    } 
+ /*fim da estilização da logo do site*/
 
-
+     /*estilização dos itens perdidos*/
     .produtos-container {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
-      margin-top: 30px;
-      margin-bottom: 50 px;
-      width: 100%;
-      max-width: 1200px;
+      display: grid; 
+      grid-template-columns: repeat(5, 1fr);  /*deixa os itens um emcima do outro*/
+      gap: 20px; 
+      margin-top: 30px;  /*determina a localização da margem*/
+      margin-bottom: 50 px;  /*define como irá ficar a borda*/
+      width: 100%;  /*define a largura dos itens*/
+      max-width: 1200px;  /*define a largura maxíma dos itens*/
     }
 
     .produto:hover {
-      transform: scale(1.2);
-      height: 300px;
+      transform: scale(1.2);  /*define a animação quando o mouse ficar emcima dos itens*/
+      height: 300px;  /*define a altura que o item irá ficar enquanto o mouse ficar emcima do item*/
     }
 
     .produto {
-
-      max-width: 180px;
-      width: 100px;
-      height: 100px;
-      transition: width 0.1s, height 0.1s;
-      padding: 15%;
-
+      max-width: 180px;  /*define a largura máxima dos itens*/
+      width: 100px;  /*define a largura dos itens*/
+      height: 100px;  /*define a altura dos itens */
+      transition: width 0.1s, height 0.1s;  /*define a transição do item (como ele ficará enquanto o mouse fica emcima dele*/
+      padding: 15%;  /*ajeita a altura na página */
+ 
     }
 
     .produto img {
-      width: 100%;
-      height: auto;
-      border-radius: 8000px;
-      display: flex;
-      justify-content: center;
+      width: 100%;  /*define a largura do item*/
+      height: auto;  /*deixa a altura automático conforme o site*/
+      border-radius: 8000px;  /*define se a borda ficará mais redonda ou quadrada*/
+      display: flex;  /*deixa os itens flexiveis para eventuais mudanças na página*/
+      justify-content: center;  /*define os itens no centro da página*/
     }
+ /*fim da estilização das imagens dos itens perdidos*/
 
+     /*estilização das tags <h1>*/
     .produto h1 {
       margin-top: 10px;
       font-size: 16px;
       color: #333;
     }
-
+    
+/*estilização dos produtos dividos com <img>*/
     .produto img {
-      width: 150px;
+      width: 150px; /*define a largura dos itens selecionados*/
     }
 
 
     h2 {
-      font-family: 'Courier New', Courier, monospace;
-      color: #ffffff;
+      font-family: 'Courier New', Courier, monospace; /*define essa fonte como padrão para esse texto*/
+      color: #ffffff; /*define as cores do texto*/
     }
 
     footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      margin-top: 50px;
-      width: 510%;
+      background-color: #333; /*define uma cor de fundo para o rodapé*/
+      color: #fff; /*define a cor do teto dentro do rodapé*/
+      padding: 20px; /define a altura do rodapé*/
+      text-align: center; /*define se o texto vai ficar no centro do rodapé */
+      margin-top: 50px; /*define onde a margem do rodepé vai se localizar na página*/
+      width: 510%; /define a largura do rodapé */
     }
 
+    /*codigo de lista para os itens selecionados*/
     ul {
-      list-style: none;
+      list-style: none; 
       padding: 0;
       margin: 0;
     }
@@ -151,36 +165,39 @@
     li {
       display: inline-block;
       margin: 0 10px;
-
     }
+/*fim das tags de lista*/
 
+    /*define as tags <a> */
     a {
-      color: #fff;
-      text-decoration: none;
+      color: #fff; 
+      text-decoration: none; /*define a decoração do texto */
     }
 
+
+    /*estilização das navegação do cabeçalho*/
     nav {
-      background: linear-gradient(to left, black, (183, 0, 255));
-      margin: 0;
-      padding: 0;
-      width: 100%;
+      background: linear-gradient(to left, black, (183, 0, 255)); /*define a cor de fundo dos botões de navegações */
+      margin: 0; /*define a margem dos itens */
+      padding: 0; /*define a altura dos botões*/
+      width: 100%; /*define a largura*/
     }
 
     nav ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
+      list-style-type: none; /*define o tipo de lista*/
+      padding: 0; /*define a altura dos itens na página */
+      margin: 0;/*define como irá ficar a margem na página*/
+      display: flex; 
+      justify-content: center; /*define todos os itens no centro */
     }
 
     nav li {
-      margin: 0 15px;
+      margin: 0 15px; /*define na margem do item */
     }
 
-    nav a {
-      color: rgb(255, 255, 255);
-      text-decoration: none;
+    nav a { 
+      color: rgb(255, 255, 255); /*defice a cor da navegação*/
+      text-decoration: none; 
       font-family: 'Courier New', Courier, monospace;
       font-size: 18px;
       padding: 10px;
@@ -188,13 +205,16 @@
 
     nav a:hover {
       background-color: rgb(0, 0, 0);
-      border-radius: 5px;
+      border-radius: 5px; /*define se a borda vai ficar mais redonda ou mais quadrada*/
     }
+/*estilização da navegação do cabeçalho*/
 
+
+    /*estilizzação do botão de troca de tema*/
     #themeToggle {
       background: none;
       border: none;
-      cursor: pointer;
+      cursor: pointer; 
       outline: none;
       margin-top: 20px;
     }
@@ -202,22 +222,22 @@
     #themeIcon {
       width: 50px;
       height: auto;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease; /*define a transição do botão quando houver a troca de tema */
       position: absolute;
       top: 2%;
       left: 92%;
     }
 
     #themeToggle:hover #themeIcon {
-      transform: scale(1.1);
+      transform: scale(1.1); /*transição do botão quando houver a troca de tema*/
     }
-
+/*fim da estilização do botão de troca de tema*/
 
     .container {
       text-align: center;
     }
 
-
+/*estilização do corpo da página do tema escuro */
     body.dark {
       background-color: #1e1e1e;
       color: #ffffff;
@@ -234,6 +254,7 @@
       justify-content: center;
       align-items: center;
     }
+    /*fim da estilização do corpo da página do tema escuro*/
   </style>
 
 </head>
