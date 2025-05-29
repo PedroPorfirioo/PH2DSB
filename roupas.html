@@ -179,17 +179,21 @@
     }
 </style>
 <script>
+        // Seleciona todos os elementos com a classe 'rp'
         const itens = document.querySelectorAll('.rp');
 
+        // Percorre cada item e adiciona eventos de mouse
         itens.forEach(item => {
+            // Evento acionado quando o mouse entra no elemento
             item.addEventListener('mouseenter', () => {
                 const texto = item.querySelector('p');
-                texto.style.display = 'block';
+                texto.style.display = 'block'; // Exibe o texto ao passar o mouse
             });
 
+            // Evento acionado quando o mouse sai do elemento
             item.addEventListener('mouseleave', () => {
                 const texto = item.querySelector('p');
-                texto.style.display = 'none';
+                texto.style.display = 'none'; // Oculta o texto ao retirar o mouse
             });
         });
 </script>
