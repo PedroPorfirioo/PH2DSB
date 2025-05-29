@@ -383,10 +383,14 @@
 
 </html>
 <script>
+  // Seleciona todos os elementos com a classe 'produto'
   const produtos = document.querySelectorAll('.produto');
 
+  // Itera sobre cada produto para adicionar eventos de mouse
   produtos.forEach(produto => {
+    // Adiciona um evento ao passar o mouse sobre o produto
     produto.addEventListener('mouseenter', function () {
+      // Cria um elemento de parágrafo para exibir o texto alternativo da imagem
       let texto = document.createElement('p');
       texto.textContent = produto.querySelector('img').alt;
       texto.style.fontSize = '15px';
@@ -394,11 +398,13 @@
       texto.style.marginTop = '10px';
       texto.style.fontWeight = 'bold';
 
+      // Verifica se o parágrafo já existe para evitar duplicação
       if (!produto.querySelector('p')) {
         produto.appendChild(texto);
       }
     });
 
+    // Adiciona um evento para remover o texto ao retirar o mouse do produto
     produto.addEventListener('mouseleave', function () {
       let textoExistente = produto.querySelector('p');
       if (textoExistente) {
@@ -407,22 +413,23 @@
     });
   });
 
+  // Seleciona os elementos relacionados à alternância de tema
   const themeToggle = document.getElementById('themeToggle');
   const themeIcon = document.getElementById('themeIcon');
   const body = document.body;
 
+  // Adiciona um evento de clique para alternar entre temas claro e escuro
   themeToggle.addEventListener('click', () => {
     body.classList.toggle('dark');
 
+    // Atualiza o ícone conforme o tema escolhido
     if (body.classList.contains('dark')) {
       themeIcon.src = "https://i.ibb.co/p6PfNXhH/Luapng.png";
-      themeIcon.alt = "Lua";
-    }
-    else {
+      themeIcon.alt = "Lua"; // Ícone da Lua para modo escuro
+    } else {
       themeIcon.src = "https://cdn-icons-png.flaticon.com/512/869/869869.png";
-      themeIcon.alt = "Sol";
+      themeIcon.alt = "Sol"; // Ícone do Sol para modo claro
     }
   });
-
-
 </script>
+
