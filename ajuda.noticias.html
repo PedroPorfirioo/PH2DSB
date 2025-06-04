@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Perdeu? Achou!</title>
+  <style>
+    
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    /*Cor da margin*/
+    header {
+      background: linear-gradient(to left, purple, black);
+      color: white;
+      text-align: center;
+      padding: 30px;
+      width: 100%;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      background: linear-gradient(to left, purple, black);
+    }
+    /*texto em negrito*/
+    .negrito {
+      font-weight: bold
+    }
+
+    nav ul li {
+      margin: 0 25px;
+    }
+
+    nav ul li a {
+      color: aliceblue;
+      text-decoration: none;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 18px;
+      padding: 10px;
+    }
+
+    .pp {
+      color: black;
+    }
+
+    .ppx {
+      color: black;
+    }
+
+
+
+    nav ul li a:hover {
+      background-color: blue;
+      border-radius: 15px;
+    }
+
+    .usuario,
+    .usuario2 {
+      position: absolute;
+      top: 10px;
+    }
+
+    .usuario {
+      right: 10px;
+    }
+
+    .usuario2 {
+      left: 10px;
+    }
+    /*imagem de login*/
+    .usuario img,
+    .usuario2 img {
+      width: 50px;
+      height: auto;
+    }
+
+    h2 {
+      font-family: 'Courier New', Courier, monospace;
+      color: #bdd8f4;
+      text-align: center;
+    }
+    /*Forma da lupa de pesquisa*/
+    form#searchForm {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    #searchInput {
+      padding: 10px;
+      font-size: 14px;
+      border: 2px solid #ccc;
+      border-radius: 20px;
+      width: 250px;
+    }
+    /*Cor de funda da lupa*/
+    button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    /*Transição do tema escuro para o claro*/
+    #themeToggle:hover #themeIcon {
+    transform: scale(1.1);
+  }
+
+  #themeToggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-top: 20px;
+  }
+   /*tema do botão de modulo escuro e claro*/
+   #themeIcon {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease;
+    position: absolute;
+    top: 2%;
+    left: 92%;
+  }
+  /*Tema Escuro*/
+  body.dark {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #111;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    p {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      padding: 20px;
+      font-size: 20px;
+      text-align: center;
+      max-width: 800px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="theme-toggle">
+      <button id="themeToggle" title="Alternar Tema">
+        <img id="themeIcon" src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Sol" />
+      </button>
+    </div>
+
+    <!-- Imagens fixadas, mais acima da parte inferior -->
+    <div style="position: fixed; bottom: 340px; left: 150px; text-align: center;">
+      <img src="https://i.ibb.co/jkdZ8Yvd/unnamed-1.png" alt="Mochila no rodapé"
+        style=" bottom: 200px; width: 350px; border-radius: 50px;">
+      <p class="negrito"
+        style="color: black; font-weight: bold; background-color: rgba(255,255,255,0.7); border-radius: 10px; margin-top: 5px; padding: 5px;">
+        Celular Perdido é Devolvido com Ajuda
+
+        de Plataforma Criada por alunos
+
+      </p>
+      <p class="ppx">O site de achados e perdidos do Yvone pimentel criada
+        por alunos ajuda um colega a recuperar o seu celular</p>
+    </div>
+
+    <div style="position: fixed; bottom: 200px; right: 250px; text-align: center;">
+      <img src="https://i.ibb.co/nsGrPTvq/unnamed.png" alt="Garrafa no rodapé"
+        style="width: 350px; border-radius: 50px; margin-top: -10px; border-right: -15px;">
+      <p class="negrito"
+        style="color: black; font-weight: bold; background-color: rgba(255,255,255,0.7); border-radius: 10px; margin-top: 5px; padding: 5px;">
+        Alunos do Colégio Cívico Militar
+        Yvone Pimentel criam site de
+        achados e perdidos
+      </p>
+      <p class="pp"> curso técnico desenvolve um site para alunos do Paraná</p>
+    </div>
+
+
+    <div class="usuario2">
+      <img src="https://i.ibb.co/fYR33WhS/perdeu-achou-removebg-preview.png" alt="Logo">
+    </div>
+    <div class="usuario">
+      <a href="pagina-de-login.html">
+        <img src="https://i.ibb.co/ymQC0k4n/user-icon-on-transparent-background-free-png.png" alt="Ícone de usuário">
+      </a>
+    </div>
+    <h1>Perdeu? Achou!</h1>
+    <form id="searchForm">
+    <input type="text" id="searchInput" placeholder="Digite sua pesquisa">
+    <button type="submit">🔍</button>
+  </form>
+
+
+    <nav>
+      <!--Barra de auxilio-->
+      <ul>
+        <li><a href="#">Dicas</a></li>
+        <li><a href="#">Notificação</a></li>
+        <li><a href="#">Ajuda</a></li>
+        <li><a href="#">Idioma do site</a></li>
+        <li><a href="forum.html">Fórum</a></li>
+        <li><a href="pagina-de-login.html">Login</a></li>
+        <li><a href="material.html">Material</a></li>
+        <li><a href="objetos.html">Objetos</a></li>
+        <li><a href="roupas.html">Roupas</a></li>
+        <li><a href="brinquedos.html">Brinquedos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    
+  </main>
+</body>
+
+</html>
+<!--script do modulo de tema escuro e claro-->
+<script>
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+  const body = document.body;
+
+  themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark');
+
+    if (body.classList.contains('dark')) {
+      themeIcon.src = "https://i.ibb.co/p6PfNXhH/Luapng.png";
+      themeIcon.alt = "Lua";
+    }
+    else {
+      themeIcon.src = "https://cdn-icons-png.flaticon.com/512/869/869869.png";
+      themeIcon.alt = "Sol";
+    }
+  });
+
+</script>
